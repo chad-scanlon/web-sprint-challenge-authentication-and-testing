@@ -25,12 +25,17 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+   Sessions/cookies allow a user to be authenticated and logged into an application and stay authenticated and logged in for the duration of their session by creating a file in a temporary file on the server side which can check a session ID for validation, the client then has their session ID stored as a cookie on the client side browser, so that the data is already there when sending http requests to the server.
+   JWTs are a piece of data generated on the server side then retrieved by the client and stored on the client side for validation while accessing the API, like a key unlocking a door.
 
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+   Bcrypt takes a password and hashes it, which means whatever string was submitted as a password goes through crypt and gets turned into a different string of letters, numbers, and characters, and then another string, and again until the desired number of hashes is reached. Bcrypt goes one step further by adding “salt” to the hashing process, which is additional random data added to the input of a hashing function to help make each hash unique.
 
-3. How are unit tests different from integration and end-to-end testing.
+3) How are unit tests different from integration and end-to-end testing.
+   Unit tests test one function or step. They are concise, specific tests. Integration tests test more than one function, typically ones that perform related tasks or depend on the execution of one function in order to move onto to the next. End-to-end testing tests the path a user would take while using an application from start to finish, which would include several steps to test.
 
-4. How _Test Driven Development_ changes the way we write applications and tests.
+4) How _Test Driven Development_ changes the way we write applications and tests.
+   By writing the test first, or at least having the test in mind when writing our code, we are forced to think about the edge-cases that would cause the test to fail. Doing that should result in cleaner code with fewer bugs, as the cod we write should produce fewer bugs.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
